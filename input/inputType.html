@@ -13,10 +13,19 @@
   <div class="weui_cells weui_cells_form">
     <div class="weui_cell">
         <div class="weui_cell_hd">
+            <label class="weui_label">text</label>
+        </div>
+        <div class="weui_cell_bd weui_cell_primary">
+            <input class="weui_input" type="text" placeholder="请输入任意字符">
+        </div>
+    </div>
+
+    <div class="weui_cell">
+        <div class="weui_cell_hd">
             <label class="weui_label">number</label>
         </div>
         <div class="weui_cell_bd weui_cell_primary">
-            <input class="weui_input" type="number" placeholder="请输入数字">
+            <input class="weui_input" type="number" min="1" max="9" maxlength="11" placeholder="请输入数字">
         </div>
     </div>
     
@@ -25,7 +34,7 @@
             <label class="weui_label">tel</label>
         </div>
         <div class="weui_cell_bd weui_cell_primary">
-            <input class="weui_input" type="tel" placeholder="请输入电话号码">
+            <input class="weui_input" type="tel" maxlength="11" placeholder="请输入电话号码">
         </div>
     </div>
     
