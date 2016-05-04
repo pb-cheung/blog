@@ -10,6 +10,7 @@
   <title>input type</title>
 </head>
 <body>
+<form action="demo-form.php">    
   <div class="weui_cells weui_cells_form">
     <div class="weui_cell">
         <div class="weui_cell_hd">
@@ -73,7 +74,22 @@
             <input class="weui_input" type="url" placeholder="请输入链接地址">
         </div>
     </div>
+
+    <div class="weui_cell">
+        <div class="weui_cell_hd">
+            <label class="weui_label">pattern</label>
+        </div>
+        <div class="weui_cell_bd weui_cell_primary">
+            <input class="weui_input" type="[A-Za-z]{3}" title="Three letter country code" placeholder="请输入三个字母">
+        </div>
+    </div>
+
+    <div class="weui_cell">
+        <div class="weui_cell_hd">
+            <input type="submit" class="weui_btn weui_btn_mini weui_btn_default">
+        </div>
 </div>
+</form>
 <script>
 $("#amount").on("keyup",function(e){
   var fee = $("#amount").val();
