@@ -1,0 +1,75 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content=" initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="stylesheet" type="text/css" href="https://res.wx.qq.com/open/libs/weui/0.4.2/weui.css" />
+    <script src="http://zeptojs.com/zepto.min.js"></script>
+  <title>input type</title>
+</head>
+<body>
+  <div class="weui_cells weui_cells_form">
+    <div class="weui_cell">
+        <div class="weui_cell_hd">
+            <label class="weui_label">number</label>
+        </div>
+        <div class="weui_cell_bd weui_cell_primary">
+            <input class="weui_input" type="number" placeholder="请输入数字">
+        </div>
+    </div>
+    
+    <div class="weui_cell">
+        <div class="weui_cell_hd">
+            <label class="weui_label">tel</label>
+        </div>
+        <div class="weui_cell_bd weui_cell_primary">
+            <input class="weui_input" type="tel" placeholder="请输入电话号码">
+        </div>
+    </div>
+    
+    <div class="weui_cell">
+        <div class="weui_cell_hd">
+            <label class="weui_label">email</label>
+        </div>
+        <div class="weui_cell_bd weui_cell_primary">
+            <input class="weui_input" type="email" placeholder="请输入邮箱地址">
+        </div>
+    </div>
+    
+    <div class="weui_cell">
+        <div class="weui_cell_hd">
+            <label class="weui_label">date</label>
+        </div>
+        <div class="weui_cell_bd weui_cell_primary">
+            <input class="weui_input" type="date" placeholder="请选择日期">
+        </div>
+    </div>
+    
+    <div class="weui_cell">
+        <div class="weui_cell_hd">
+            <label class="weui_label">time</label>
+        </div>
+        <div class="weui_cell_bd weui_cell_primary">
+            <input class="weui_input" type="time" placeholder="请选择时间">
+        </div>
+    </div>
+    
+    <div class="weui_cell">
+        <div class="weui_cell_hd">
+            <label class="weui_label">url</label>
+        </div>
+        <div class="weui_cell_bd weui_cell_primary">
+            <input class="weui_input" type="url" placeholder="请输入链接地址">
+        </div>
+    </div>
+</div>
+<script>
+$("#amount").on("keyup",function(e){
+  var fee = $("#amount").val();
+  $("#amount").focus();
+});
+</script>
+</body>
+</html>
