@@ -1,26 +1,27 @@
-
 <!DOCTYPE html>
 <html>
 <head>
+    <meta charset="UTF-8">
+    <title>canvas 合并图片</title>
     <meta name="viewport" content=" initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <script src="http://zeptojs.com/zepto.min.js"></script>
-    <style>
-    </style>
-    <title>canvas 合并图片</title>
 </head>
 <body>
 <canvas id="myCanvas">
     你的浏览器不支持canvas，建议使用最新版的Chrome浏览器。
 </canvas>
+<input type="button" value="保存" width="20" id="save" />
+<div id="tempDiv"></div>
 
 <script>
 var img1 = document.createElement("img"),
     img2 = document.createElement("img");
-img1.src = "http://7xo5yo.com1.z0.glb.clouddn.com/wxpay.png";
-img2.src = "http://7xo5yo.com1.z0.glb.clouddn.com/timeline.pngicon_res_download_moments.png";
-
+img1.src = "http://o6qwrpd88.bkt.clouddn.com/wxpay.png";
+img2.src = "http://o6qwrpd88.bkt.clouddn.com/icon_res_download_moments.png";
+img1.setAttribute("crossOrigin", 'anonymous');
+img2.setAttribute("crossOrigin", "anonymous");
 //canvas必须设定确定的宽高
 var canvas = document.getElementById("myCanvas");
 canvas.width = "600";
@@ -28,17 +29,42 @@ canvas.height = "600";
 
 
 var ctx = canvas.getContext("2d");
-ctx.rect(0,0, 800, 800);
+ctx.rect(0,0, 600, 600);
 ctx.fillStyle = "#fff";
 ctx.fill();
 
-//图像载入完毕再进行操作
-img1.onload = function(){
+var imageURL;
+
+//图像载入完毕再进行操作，Safari不支持onload
+img1.addEventListener("load",function(){
     ctx.drawImage(img1, 250, 250,96,96);
-}
-img2.onload = function(){
+},false);
+img2.addEventListener("load",function(){
     ctx.drawImage(img2, 0, 0, 600, 600);
+    imageURL = canvas.toDataURL("image/png");
+    var img3 = new Image();
+    $("#tempDiv").append(img3);
+    img3.src = imageURL;
+    canvas.style.display = "none";
+},false);
+
+function saveImageInfo () 
+{ 
+    var w = window.open('about:blank','image from canvas'); 
+    w.document.write("<img src='"+imageURL+"' alt='from canvas'/>"); 
 }
+
+
+function saveAsLocalImage () { 
+    var image = canvas.toDataURL("image/png").replace("image/png", "image/octet-stream"); 
+    window.location.href = image; // it will save locally 
+} 
+
+$("#save").on("click",function(){
+   saveImageInfo();
+});
+
 </script>
+
 </body>
 </html>
