@@ -1,0 +1,44 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content=" initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <script src="http://zeptojs.com/zepto.min.js"></script>
+    <style>
+    </style>
+    <title>canvas 合并图片</title>
+</head>
+<body>
+<canvas id="myCanvas">
+    你的浏览器不支持canvas，建议使用最新版的Chrome浏览器。
+</canvas>
+
+<script>
+var img1 = document.createElement("img"),
+    img2 = document.createElement("img");
+img1.src = "http://7xo5yo.com1.z0.glb.clouddn.com/wxpay.png";
+img2.src = "http://7xo5yo.com1.z0.glb.clouddn.com/timeline.pngicon_res_download_moments.png";
+
+//canvas必须设定确定的宽高
+var canvas = document.getElementById("myCanvas");
+canvas.width = "600";
+canvas.height = "600";
+
+
+var ctx = canvas.getContext("2d");
+ctx.rect(0,0, 800, 800);
+ctx.fillStyle = "#fff";
+ctx.fill();
+
+//图像载入完毕再进行操作
+img1.onload = function(){
+    ctx.drawImage(img1, 250, 250,96,96);
+}
+img2.onload = function(){
+    ctx.drawImage(img2, 0, 0, 600, 600);
+}
+</script>
+</body>
+</html>
