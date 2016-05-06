@@ -6,13 +6,14 @@
     <meta name="viewport" content=" initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="stylesheet" type="text/css" href="https://res.wx.qq.com/open/libs/weui/0.4.2/weui.css" />
     <script src="http://zeptojs.com/zepto.min.js"></script>
 </head>
 <body>
 <canvas id="myCanvas">
     你的浏览器不支持canvas，建议使用最新版的Chrome浏览器。
 </canvas>
-<input type="button" value="保存" width="20" id="save" />
+<a href="javascript:;" class="weui_btn weui_btn_primary" id="save" style="width:60%;">打开新页面保存</a>
 <div id="tempDiv"></div>
 
 <script>
@@ -22,6 +23,7 @@ img1.src = "http://o6qwrpd88.bkt.clouddn.com/wxpay.png";
 img2.src = "http://o6qwrpd88.bkt.clouddn.com/icon_res_download_moments.png";
 img1.setAttribute("crossOrigin", 'anonymous');
 img2.setAttribute("crossOrigin", "anonymous");
+
 //canvas必须设定确定的宽高
 var canvas = document.getElementById("myCanvas");
 canvas.width = "600";
@@ -65,6 +67,5 @@ $("#save").on("click",function(){
 });
 
 </script>
-
 </body>
 </html>
