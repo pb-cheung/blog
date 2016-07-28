@@ -1,7 +1,11 @@
 # 说明
-博客相关的代码都放到这里啦
+
+博客相关的代码和静态资源
 
 博客地址：http://suibobuzhuliu.github.io/
+
+Issues里也丢了几篇文章：https://github.com/suibobuzhuliu/blog/issues
+在issue中浏览文章确实清爽
 
 ## 目录说明
 input
