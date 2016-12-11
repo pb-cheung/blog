@@ -1,11 +1,27 @@
-# 说明
+## 前端技能树
 
-博客相关的代码和静态资源
+## Vue.js
 
-博客地址：http://suibobuzhuliu.github.io/
+[Vuex学习笔记](https://github.com/suibobuzhuliu/blog/issues/4)
 
-Issues里也丢了几篇文章：https://github.com/suibobuzhuliu/blog/issues
-在issue中浏览文章确实清爽
+
+
+
+## ES6
+
+
+## pure JS
+[正则表达式常用栗子](https://github.com/suibobuzhuliu/blog/issues/1)
+
+## 兼容性
+[浏览器类型鉴别那些事](https://github.com/suibobuzhuliu/blog/issues/2)
+
+## 工具
+
+[比Grunt更好用的前端自动化工具——gulp](https://github.com/suibobuzhuliu/blog/issues/3)
+
+
+
 
 ## 目录说明
 input
