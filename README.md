@@ -8,7 +8,7 @@
 
 
 ## ES6
-
+[异步操作对象——Promise](https://github.com/suibobuzhuliu/blog/issues/5)
 
 ## pure JS
 [正则表达式常用栗子](https://github.com/suibobuzhuliu/blog/issues/1)
