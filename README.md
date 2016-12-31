@@ -4,7 +4,7 @@
 
 [Vuex学习笔记](https://github.com/suibobuzhuliu/blog/issues/4)
 
-
+[Vue.js表单focus（获取焦点）](https://github.com/suibobuzhuliu/blog/issues/6)
 
 
 ## ES6
