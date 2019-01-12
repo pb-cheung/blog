@@ -1,5 +1,8 @@
 ## 前端技能树
 
+## 小程序
+[WebStorm中配置微信小程序语法提示](https://github.com/pbestz/blog/issues/8)
+
 ## Vue.js
 
 [Vuex学习笔记](https://github.com/suibobuzhuliu/blog/issues/4)
